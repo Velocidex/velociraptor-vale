@@ -33,7 +33,7 @@ files. To include these files when cloning you eaither need to run:
 
 or else run:
 
-`git submodule update --init --recursive`
+`git submodule update --remote --recursive`
 
 after cloning, to pull in the submodule contents.
 
