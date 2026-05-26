@@ -1,4 +1,6 @@
-## What is Vale?
+## Vale config for Velociraptor projects
+
+### What is Vale?
 
 https://vale.sh/docs
 
@@ -6,7 +8,7 @@ https://vale.sh/docs
 > Vale is cross-platform (Windows, macOS, and Linux), written in Go,
 > and available on GitHub.
 
-## Vale files and folders
+### Vale files and folders
 
 By cloning the repo you will already have the files and folders
 necessary to run the Vale tests. All you need to do is ensure that you
@@ -26,7 +28,7 @@ structure we use is
 [as recommended by Vale](https://github.com/vale-cli/vale-action#repository-structure).
 
 
-## Running Vale locally
+### Running Vale locally
 
 1. Install the latest `vale` binary into your path. Test it by running
    `vale --ls-dirs` or `vale version`.
@@ -41,3 +43,27 @@ structure we use is
    to find the Vale `styles` directory (which is in `.github/`).
 
 3. Run `vale .` is all you need to do to perform all the checks.
+
+
+### Output templates
+
+Vale's default output is usually fine, but for particular types of
+tasks you might want to try the custom output templates in
+`vale/config/templates`.
+
+Some generate more concise output (useful for feeding into other CLI
+apps) and some are just more human-friendly.
+
+Use them with the `--output` flag, for example:
+
+```sh
+vale . --output=collate.tmpl
+```
+
+Vale also has a native `JSON` output format that you might find
+useful:
+
+```sh
+vale . --output="JSON"
+```
+
