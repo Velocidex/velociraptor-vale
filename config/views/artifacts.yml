@@ -1,0 +1,13 @@
+engine: dasel
+scopes:
+  - name: maindescription
+    expr: 'description ?? name'
+    type: md
+  - name: subdescription
+    # lower-level keys
+    expr: '..description'
+    # expr: search(has("description")).map(description)
+    type: md
+  - name: mdtemplate
+    expr: 'search(has("template") && has("type")).filter(type == "markdown").map(template)'
+    type: md

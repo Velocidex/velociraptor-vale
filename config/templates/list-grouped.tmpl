@@ -1,0 +1,34 @@
+{{- range .Files -}}
+{{- .Path | underline }}:
+{{- $file := . -}}
+
+{{- /* Use 'list' to create the collection for iteration */ -}}
+{{- $severityOrder := (list "error" "warning" "suggestion") -}}
+
+{{- range $targetSev := $severityOrder -}}
+  {{- $lastCheck := "" -}}
+  {{- range $file.Alerts -}}
+    {{- if eq .Severity $targetSev -}}
+
+      {{- /* Grouping logic: Only print the rule name if it changes */ -}}
+      {{- if ne .Check $lastCheck -}}
+        {{- $lastCheck = .Check -}}
+        {{- $header := printf "\n%s (%s)" .Check .Severity -}}
+
+        {{- /* Apply colors based on severity */ -}}
+        {{- if eq .Severity "error" -}}
+            {{- $header | red -}}
+        {{- else if eq .Severity "warning" -}}
+            {{- $header | yellow -}}
+        {{- else -}}
+            {{- $header | blue -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- /* Print the match */ -}}
+      {{ printf "\n%s" .Match }}
+    {{- end -}}
+  {{- end -}}
+{{- end }}
+
+{{ end -}}

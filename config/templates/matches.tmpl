@@ -1,0 +1,33 @@
+{{- /* Suitable output for sort -u */ -}}
+
+{{- /* Keep track of our various counts */ -}}
+
+{{- $e := 0 -}}
+{{- $w := 0 -}}
+{{- $s := 0 -}}
+{{- $f := 0 -}}
+
+{{- /* Range over the linted files */ -}}
+
+{{- range .Files}}
+
+{{- $f = add1 $f -}}
+
+{{- /* Range over the file's alerts */ -}}
+
+{{- range .Alerts -}}
+
+{{- $error := "" -}}
+{{- if eq .Severity "error" -}}
+    {{- $e = add1 $e  -}}
+{{- else if eq .Severity "warning" -}}
+    {{- $w = add1 $w -}}
+{{- else -}}
+    {{- $s = add1 $s -}}
+{{- end}}
+{{- printf "%s" .Match }}
+{{end -}}
+{{end -}}
+{{ "-------------------------------------------------------------" }}
+{{$e | toString }} {{"errors" | red}}, {{ $w | toString }} {{"warnings" | yellow}}, {{ $s | toString }} {{"suggestions" | blue }} in {{$f}} {{$f | int | plural "file" "files"}}.
+

@@ -1,0 +1,56 @@
+extends: repetition
+level: error
+message: "Repeated word: '%s'"
+description: |
+  Checks for repeated words which humans have a hard time seeing.
+scope:
+  - alt
+  - blockquote
+  - comment
+  - figure.caption
+  - heading
+  - list
+  - paragraph
+  - sentence
+  - summary
+  - table
+  - table.caption
+  - table.cell
+  - table.header
+  - maindescription
+  # - sentence.maindescription
+  # - heading.maindescription
+  - subdescription
+  - mdtemplate
+
+  # - comment.block
+  # - comment.line
+  # - raw
+  # - text
+  # - text.frontmatter.date
+  # - text.frontmatter.description
+  # - text.frontmatter.draft
+  # - text.frontmatter.last_reviewed
+  # - text.frontmatter.menutitle
+  # - text.frontmatter.summary
+  # - text.frontmatter.title
+  # - text.frontmatter.weight
+  # - title
+action:
+  name: edit
+  params:
+    - regex
+    - '(\w+) (\w+)'
+    - '$1'
+ignorecase: true
+alpha: true
+exceptions:
+  - 'time'
+  - 'float'
+  - 'int'
+  - 'bytes'
+  - 'double'
+  - 'ModTime'
+  - 'unused'
+tokens:
+  - '[^\s]+'

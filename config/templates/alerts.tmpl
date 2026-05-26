@@ -1,0 +1,29 @@
+{{- range .Files}}
+
+{{- .Path }}
+{{- "\n" -}}
+
+{{- $p := .Path -}}
+
+{{- $msgToLoc := dict -}}
+{{- $msgToLvl := dict -}}
+{{- $msgToChk := dict -}}
+
+{{- range .Alerts -}}
+--------------------------
+File: {{ $p }}
+Action: {{ .Action }}
+Span: {{ .Span }}
+Offset: {{ .Offset }}
+Check: {{ .Check }}
+Description: {{ .Description | trunc 20 }}
+Link: {{ .Link }}
+Message: {{ .Message }}
+Severity: {{ .Severity }}
+Match: {{ .Match }}
+Line: {{ .Line }}
+Limit: {{ .Limit }}
+Hide: {{ .Hide }}
+
+{{end}}
+{{end}}

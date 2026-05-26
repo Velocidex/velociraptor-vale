@@ -1,0 +1,13 @@
+extends: existence
+message: 'Artifact description starts with "%s"'
+description: |
+  'Avoid starting with "This artifact..." which is a pointless
+  self-reference. The description lead sentence needs to get straight
+  to the point.'
+link: none
+ignorecase: true
+scope:
+  - maindescription
+
+raw:
+  - '(?s)(?-m)^This artifact '

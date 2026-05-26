@@ -1,0 +1,17 @@
+SET UTF-8
+
+TRY esiaénrtolcdugmfphbyvkw-'.zqjxSNRTLCGDMFPHBEAUYOIVKWóöâôZQJXÅçèîêàïüäñ
+
+ICONV 1
+ICONV ’ '
+
+WORDCHARS 0123456789'
+
+# Define a flag 'P' for Plural
+SFX P Y 2
+SFX P   0   s    [^sxyz]
+SFX P   0   es   [sxyz]
+
+# Define a flag 'M' for Possessive
+SFX M Y 1
+SFX M   0   's   .

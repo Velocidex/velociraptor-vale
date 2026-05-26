@@ -1,0 +1,43 @@
+extends: existence
+message: "%s"
+description: |
+  "A utility rule for identifying which content is being parsed into which scopes. Useful for rule dev/testing."
+link: none
+ignorecase: true
+level: suggestion
+scope:
+  # - heading
+  # - list
+  # - paragraph
+  # - sentence
+  # - blockquote
+  # - table
+  # - table.header
+  # - table.cell
+  # - table.caption
+  # - figure.caption
+  # - alt
+  # - title
+  # - summary
+  # - raw
+  # - text
+  # - text.frontmatter.weight
+  # - text.frontmatter.title
+  # - text.frontmatter.summary
+  # - text.frontmatter.menutitle
+  # - text.frontmatter.last_reviewed
+  # - text.frontmatter.draft
+  # - text.frontmatter.description
+  # - text.frontmatter.date
+  # - comment.line
+  # - comment.block
+  # - comment
+  - maindescription
+  # - sentence.maindescription
+  # - heading.maindescription
+  - subdescription
+  - mdtemplate
+
+
+raw:
+  - '(?s)(?-m).*'
