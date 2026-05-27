@@ -27,7 +27,7 @@ since the linting targets vary.
 
 This repo is referenced in each project as a git submodule. This means
 that a normal clone of any repo will not automatically have these
-files. To include these files when cloning you eaither need to run:
+files. To include these files when cloning you either need to run:
 
 `git clone --recurse-submodules <main-repo-url>`
 
