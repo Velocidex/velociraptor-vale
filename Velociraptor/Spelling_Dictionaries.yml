@@ -1,5 +1,8 @@
 extends: spelling
-message: "The word '%s' was not found in any dictionaries. Is it a spelling mistake?"
+message: |
+   The word '%s' was not found in any dictionaries. Is it a spelling
+   mistake? If you're sure it's a valid word then please add it to the
+   .wordlist.txt file in the project root.
 link: ""
 description: |
   Checks words against several standard dictionaries.
@@ -96,8 +99,8 @@ dictionaries:
   - lastnames
   - infosec
 ignore:
-  # temporarily ignore the exceptions list from PySpelling
-  # - ../../.wordlist.txt
+  # temporary exceptions list that PySpelling uses
+  - ../../../../.wordlist.txt
 
 
 
