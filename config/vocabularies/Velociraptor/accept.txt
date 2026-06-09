@@ -6,14 +6,12 @@ ruleset
 scudette
 vtypes
 VQL
-abovementioned
+predictiple
 artifactset
-Excalifont
 Excalifont
 Nunito
 Shanns
 Velocistack
-explainability
 facto
 [Vv]type
 vfilter
