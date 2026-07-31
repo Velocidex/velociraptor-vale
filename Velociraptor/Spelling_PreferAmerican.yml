@@ -1,0 +1,167 @@
+extends: substitution
+message: Preferrably use the American spelling '%s' instead of the British spelling '%s'.
+link: ""
+description: |
+  While the list below is not exhaustive it should cover the most
+  common British/American spelling differences. The list was augmented
+  with British-spelled words that were actually used on the docs
+  website, so this past word usage should be a good reflection of
+  expected future usage. It should cover the most common words, which
+  are the ones we most want to keep consistent.
+
+  The reason we don't just switch to using a US dictionary for
+  spelling checks is that Britsh vs. American is not a significant
+  enough reason to fail PRs. We emit only a warning so that the author
+  can fix it if he wants to. If a word has valid non-US spelling
+  that's good enough - Vale can be run manually with this rule on
+  occasion to bulk-correct spelling discrepancies.
+level: warning
+scope:
+  - alt
+  - blockquote
+  - comment
+  - figure.caption
+  - heading
+  - list
+  - paragraph
+  - sentence
+  - summary
+  - table
+  - table.caption
+  - table.cell
+  - table.header
+  - maindescription
+  - subdescription
+  - mdtemplate
+ignorecase: true
+nonword: false
+swap:
+  ageing: aging
+  aeroplane: airplane
+  aluminium: aluminum
+  analyse: analyze
+  analysed: analyzed
+  analysing: analyzing
+  anaemia: anemia
+  anaesthesia: anesthesia
+  annexe: annex
+  apologise: apologize
+  artefact: artifact
+  artefacts: artifacts
+  authorisation: authorization
+  authorise: authorize
+  authorised: authorized
+  authorising: authorizing
+  behaviour: behavior
+  behavioural: behavioral
+  busses: buses
+  calibre: caliber
+  categorise: categorize
+  categorised: categorized
+  categorises: categorizes
+  categorising: categorizing
+  centre: center
+  cheque: check
+  cypher: cipher
+  customisation: customization
+  customise: customize
+  civilisation: civilization
+  civilise: civilize
+  colour: color
+  cosy: cozy
+  cipher: cypher
+  defence: defense
+  dependant: dependent
+  distil: distill
+  draught: draft
+  emphasise: emphasize
+  encyclopaedia: encyclopedia
+  enrol: enroll
+  enrolment: enrollment
+  enrols: enrolls
+  enthral: enthrall
+  aeon: eon
+  favourite: favorite
+  fibre: fiber
+  fillet: filet
+  finalise: finalize
+  flavour: flavor
+  flavours: flavors
+  fulfil: fulfill
+  furore: furor
+  grey: gray
+  honour: honor
+  humour: humor
+  initialled: initialed
+  initialling: initialing
+  initialised: initialized
+  enquiry: inquiry
+  instil: instill
+  gaol: jail
+  jewellery: jewelry
+  labelled: labeled
+  labelling: labeling
+  labour: labor
+  libellous: libelous
+  licence: license
+  likeable: likable
+  liveable: livable
+  lustre: luster
+  manoeuvre: maneuver
+  marvellous: marvelous
+  meagre: meager
+  metre: meter
+  modelling: modeling
+  moustache: mustache
+  neighbour: neighbor
+  normalisation: normalization
+  normalise: normalize
+  normalised: normalized
+  normalises: normalizes
+  offence: offense
+  optimise: optimize
+  optimised: optimized
+  optimising: optimizing
+  organise: organize
+  orientated: oriented
+  pyjamas: pajamas
+  paralyse: paralyze
+  parallelised: parallelized
+  plough: plow
+  pretence: pretense
+  programme: program
+  rateable: ratable
+  realise: realize
+  recognise: recognize
+  recognises: recognizes
+  reconnoitre: reconnoiter
+  rumour: rumor
+  sabre: saber
+  saleable: salable
+  saltpetre: saltpeter
+  sepulchre: sepulcher
+  signalling: signaling
+  serialised: serialized
+  sizeable: sizable
+  sceptic: skeptic
+  skilful: skillful
+  smoulder: smolder
+  sombre: somber
+  speciality: specialty
+  spectre: specter
+  splendour: splendor
+  standardise: standardize
+  standardised: standardized
+  summarise: summarize
+  sulphur: sulfur
+  synthesise: synthesize
+  theatre: theater
+  travelled: traveled
+  traveller: traveler
+  travelling: traveling
+  unshakeable: unshakable
+  unlabelled: unlabeled
+  utilise: utilize
+  utilised: utilized
+  wilful: willful
+  yoghurt: yogurt
