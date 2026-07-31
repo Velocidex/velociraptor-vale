@@ -1,4 +1,4 @@
-833
+841
 accessor/MP
 ack/P
 acl/PM
@@ -53,6 +53,8 @@ backend/PM
 backpressure
 backreferences/P
 backtick/P
+backticks
+bandook/M
 basename/PM
 bigint
 binparsegen
@@ -86,6 +88,7 @@ Certutil/M
 checkpoint/D
 chunksize
 cli/PM
+clientless/M
 cmd/M
 cmdlet/P
 cmdline/PM
@@ -212,6 +215,7 @@ geolocation
 getcap
 Getdirentries
 getenv
+gif/PM
 gimphash/S
 glibc
 globber
@@ -279,6 +283,7 @@ kerberoast/G
 kerberos/M
 kernel/MP
 keyfile/PM
+keylogger/SM
 keyring/PM
 keytype
 klist/PM
@@ -392,6 +397,7 @@ ntdsutil/M
 ntfs/M
 num
 objtree
+observable/SM
 offsetted
 oidc
 ok
@@ -520,6 +526,7 @@ snackbar
 sneakernet/MP
 sodin/M
 sodinokibi/M
+sourceless/M
 sourcetype
 specc/GD
 sql
@@ -660,6 +667,7 @@ virtualize
 vm
 vmdk/M
 vtypes
+vuln/M
 watchlist/MDGP
 wb
 webdav
